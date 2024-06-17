@@ -1,43 +1,44 @@
+###  Description of  `App.js`and `App.scss`
 
-### Simple Description of `App.js`and `App.scss`
-
-This code creates a React application for selecting a reservation date using a calendar.
+The updated `App.js` file creates a React application for managing flight schedules with a calendar component and a "Continue" button.
 
 1. **Imports**:
-   - **React and useState**: Used to create and manage the application's state.
-   - **Backpack Components**: Pre-built components for the button, text, and calendar.
-   - **date-fns**: Library for formatting dates.
-   - **SCSS file**: Contains styles for the application.
+   - Imports necessary components from `bpk-component-calendar`, `bpk-component-button`, and `bpk-component-text`.
+   - Also imports `format` function from `date-fns` for date formatting.
+   - Imports styles from `App.scss` for styling the application.
 
-2. **Utility Functions**:
-   - `formatDateFull`: Formats a date into a full string (e.g., "Monday, 1st January 2024").
-   - `formatMonth`: Formats a date to show only the month and year (e.g., "January 2024").
-   - `daysOfWeek`: An array defining the days of the week and their properties.
+2. **State and State Management**:
+   - Uses the `useState` hook to manage the application state.
+   - Initializes `selectionConfiguration` state to handle single date selection in the calendar.
 
-3. **App Component**:
-   - Uses `useState` to manage the selected date.
-   - `handleDateSelect`: Function that updates the state when a date is selected.
-   - Renders:
-     - A header with the title "Reservation Date".
-     - A calendar that allows the user to select a date.
-     - Displays the selected date below the calendar if a date is chosen.
-     - A "Continue" button that shows an alert when clicked.
+3. **Date Formatting and Configuration**:
+   - Defines `formatDateFull` and `formatMonth` functions to format dates for display in different contexts.
+   - `daysOfWeek` array defines the properties of each day displayed in the calendar.
+
+4. **App Component**:
+   - Functional component `App` defines the structure of the application.
+   - Displays a header with the title "Flight Schedule".
+   - Contains a main section (`App__main`) with a calendar and a "Continue" button.
+   - Calendar (`BpkCalendar`) component allows selection of a single date, with custom formatting and configuration options:
+     - `onDateSelect` function updates `selectionConfiguration` state with the selected date.
+     - Displays the selected date below the calendar if one is selected.
+   - "Continue" button (`BpkButton`) triggers an alert message when clicked, indicating functionality.
+
+5. **Export**:
+   - Exports the `App` component as the default export for use in other parts of the application.
+
+### Key Points
+
+- **Functionality**: Allows users to select a date from the calendar, displaying the selected date.
+- **Styling**: Styles defined in `App.scss` ensure a consistent and visually appealing layout.
+- **Integration**: Integrates `bpk-component-calendar` seamlessly with custom date formatting and configuration.
+- **User Interaction**: Provides a simple interaction with the "Continue" button for demonstration purposes.
 
 ---
 
-### Code Structure Overview
+### Summary
 
-1. **State Management**:
-   - Initializes state to store the selected date.
-   - Updates state when a new date is selected.
-
-2. **Rendering**:
-   - The main structure includes a header, calendar, selected date display, and a button.
-   - Calendar uses various props for date selection and formatting.
-   - Selected date is conditionally displayed below the calendar.
-   - Button triggers an alert when clicked.
-
-This application provides a simple user interface for choosing a date and confirms the selection with a message.
+The`App.js` file integrates a flight schedule management feature using React and Backpack UI components. It enhances user experience with a responsive calendar for date selection and a functional button for further actions.
 
 
 
