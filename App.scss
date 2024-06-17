@@ -1,0 +1,47 @@
+.App {
+  font-family: 'Arial, sans-serif';
+  text-align: center;
+  color: #333;
+}
+
+.App__header {
+  background-color: #0288d1;
+  padding: 20px;
+  color: white;
+}
+
+.App__header-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.App__heading {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.App__main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.App__calendar-container {
+  margin-bottom: 20px;
+}
+
+.App__selected-date {
+  margin-top: 10px;
+}
+
+.App__button {
+  background-color: #0288d1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.App__button:hover {
+  background-color: #0277bd;
+}
