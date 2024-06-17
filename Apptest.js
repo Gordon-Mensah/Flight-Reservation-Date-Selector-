@@ -6,7 +6,6 @@ import BpkCalendar, { CALENDAR_SELECTION_TYPE } from 'bpk-component-calendar';
 import format from 'date-fns/format';
 import './App.scss';
 
-const c = className => STYLES[className] || 'UNKNOWN';
 const formatDateFull = date => format(date, 'EEEE, do MMMM yyyy');
 const formatMonth = date => format(date, 'MMMM yyyy');
 const daysOfWeek = [
@@ -37,7 +36,7 @@ const App = () => {
       <header className="App__header">
         <div className="App__header-inner">
           <BpkText tagName="h1" textStyle="xxl" className="App__heading">
-            Reservation Date
+            Flight Schedule
           </BpkText>
         </div>
       </header>
